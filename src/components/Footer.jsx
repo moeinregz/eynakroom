@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="v-foot">
-        <div className="brand-name">EYNAKROOM.</div>
+        <div className="brand"><span className="brand-mark">E</span><span><span className="brand-name">EYNAKROOM</span><span className="brand-sub">EYE ATELIER</span></span></div>
         <p>طراحی برای نگاهی متفاوت.</p>
         <p className="v-foot-links">
           <Link to="/shop">فروشگاه</Link>

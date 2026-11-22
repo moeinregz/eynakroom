@@ -70,9 +70,9 @@ export default function ProductCard({ product }) {
             <img src={imageUrl(product.image)} alt={product.name} />
           ) : (
             <svg viewBox="0 0 100 140" fill="none">
-              <circle cx="32" cy="70" r="22" fill="none" stroke="#A9C4C0" stroke-width="6" />
-              <circle cx="68" cy="70" r="22" fill="none" stroke="#A9C4C0" stroke-width="6" />
-              <path d="M54 70h-4M10 66l8-4M90 66l-8-4" stroke="#A9C4C0" stroke-width="6" stroke-linecap="round" />
+              <circle cx="32" cy="70" r="22" fill="none" stroke="#B7A987" stroke-width="6" />
+              <circle cx="68" cy="70" r="22" fill="none" stroke="#B7A987" stroke-width="6" />
+              <path d="M54 70h-4M10 66l8-4M90 66l-8-4" stroke="#B7A987" stroke-width="6" stroke-linecap="round" />
             </svg>
           )}
         </div>

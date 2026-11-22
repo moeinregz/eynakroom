@@ -29,7 +29,8 @@ export default function Header() {
       <header id="siteHeader" className={scrolled ? 'scrolled' : ''}>
         <div className="wrap nav-inner">
           <Link to="/" className="brand">
-            <span className="brand-name">EYNAKROOM.</span>
+            <span className="brand-mark">E</span>
+            <span><span className="brand-name">EYNAKROOM</span><span className="brand-sub">EYE ATELIER</span></span>
           </Link>
 
           <nav className="nav-links">
