@@ -22,7 +22,7 @@ export default function DashboardLayout() {
                 <path d="M11.2 15h1.6M2.8 12.5l2.4-3M21.2 12.5l-2.4-3" />
               </svg>
             </span>
-            <span className="brand-name" style={{ fontSize: '1.05rem' }}>Eynak<span>Room</span> داشبورد</span>
+            <span className="brand-name" style={{ fontSize: '1.05rem' }}>EYNAKROOM داشبورد</span>
           </Link>
           <div className="dash-topbar-links">
             <Link to="/dashboard" className={isProductsActive ? 'active' : ''}>محصولات</Link>

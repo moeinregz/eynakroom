@@ -18,12 +18,10 @@ export default function Header() {
   }, [menuOpen]);
 
   const links = [
+    { href: '/', label: 'خانه' },
+    { href: '/shop', label: 'کالکشن' },
     { href: '/#about', label: 'درباره ما' },
-    { href: '/#services', label: 'خدمات' },
-    { href: '/shop', label: 'فروشگاه' },
     { href: '/blog', label: 'وبلاگ' },
-    { href: '/#testimonials', label: 'نظرات مشتریان' },
-    { href: '/#contact', label: 'تماس با ما' },
   ];
 
   return (
@@ -31,14 +29,7 @@ export default function Header() {
       <header id="siteHeader" className={scrolled ? 'scrolled' : ''}>
         <div className="wrap nav-inner">
           <Link to="/" className="brand">
-            <span className="brand-mark">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <circle cx="7" cy="15" r="4.2" />
-                <circle cx="17" cy="15" r="4.2" />
-                <path d="M11.2 15h1.6M2.8 12.5l2.4-3M21.2 12.5l-2.4-3" />
-              </svg>
-            </span>
-            <span className="brand-name">Eynak<span>Room</span></span>
+            <span className="brand-name">EYNAKROOM.</span>
           </Link>
 
           <nav className="nav-links">
@@ -62,13 +53,6 @@ export default function Header() {
                 <path d="M4.5 20c1.4-3.6 4.4-5.5 7.5-5.5s6.1 1.9 7.5 5.5" />
               </svg>
             </Link>
-            <a className="nav-phone" href="tel:09129234145">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-              09129234145
-            </a>
-            <a href="/#contact" className="btn btn-light" style={{ padding: '13px 24px' }}>مشاوره رایگان</a>
             <button
               className={`burger ${menuOpen ? 'open' : ''}`}
               onClick={() => setMenuOpen((v) => !v)}
