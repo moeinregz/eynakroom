@@ -1,0 +1,217 @@
+/* ===================================================================
+   VISION THEME — dark royal green + muted gold (luxury / brand look)
+   Loaded after index.css; overrides tokens and surfaces only.
+   =================================================================== */
+:root{
+  --green:#064C48;      /* signature green */
+  --green-deep:#043D3A; /* page background */
+  --green-ink:#032F2D;  /* header / footer / deepest */
+  --gold:#C9A961;
+  --gold-soft:#E0CB96;
+  --cream:#F1EAD9;
+  --mist:#A9C4C0;
+
+  --bg:var(--green-deep);
+  --bg-soft:var(--green-ink);
+  --bg-card:var(--green);
+  --maserati:var(--gold);        /* accent used for text/borders */
+  --maserati-deep:var(--green-ink);
+  --maserati-2:var(--gold-soft);
+  --maserati-3:var(--gold);
+  --steel:var(--gold-soft);
+  --steel-tint:var(--mist);
+  --pink:var(--gold);
+  --charcoal:var(--cream);
+  --muted:#A9C4C0;
+  --line:rgba(201,169,97,.22);
+  --line-blue:rgba(201,169,97,.35);
+  --shadow-soft:0 30px 60px -28px rgba(0,0,0,.6);
+  --shadow-tight:0 16px 32px -18px rgba(0,0,0,.55);
+}
+body{background:var(--bg);color:var(--cream)}
+::selection{background:var(--gold);color:var(--green-ink)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---- type ---- */
+h1,h2,h3{font-weight:500;letter-spacing:0;font-stretch:normal;line-height:1.35}
+.h-display{font-weight:500}
+.brand-name,.watermark,.marquee-track span,.kicker,.home-search-kicker{font-family:'Cormorant Garamond','Vazirmatn',serif}
+.brand-name{font-size:1.6rem;font-weight:600;letter-spacing:.18em;color:var(--gold-soft)}
+.brand-name span{color:var(--cream)}
+.lede{color:rgba(241,234,217,.8)}
+.on-blue .lede,.on-blue p{color:rgba(241,234,217,.85)}
+.hero-copy h1 em{color:var(--gold-soft);font-weight:300}
+.kicker,.section-head .kicker{color:var(--gold);letter-spacing:.14em}
+.watermark{color:rgba(201,169,97,.07);font-weight:500}
+
+/* ---- buttons: sharp, gold hairline ---- */
+.btn{border-radius:0;font-weight:500;letter-spacing:.3px;padding:15px 38px}
+.btn-solid,.btn-light{background:transparent;color:var(--gold-soft);border:1px solid var(--gold);box-shadow:none}
+.btn-solid:hover,.btn-light:hover{background:var(--gold);color:var(--green-ink);box-shadow:none;transform:none}
+.btn-ghost,.btn-ghost-blue{border:1px solid var(--line-blue);color:var(--cream)}
+.btn-ghost:hover,.btn-ghost-blue:hover{background:rgba(201,169,97,.1);border-color:var(--gold);transform:none}
+.btn-pill-dark{background:var(--green-ink);border:1px solid var(--line-blue);box-shadow:none}
+
+/* ---- header / mobile menu / footer ---- */
+header{background:var(--green-ink);border-bottom:1px solid var(--line);box-shadow:none}
+header.scrolled{box-shadow:0 14px 30px -18px rgba(0,0,0,.7)}
+.brand-mark{border-color:var(--gold)}
+.brand-mark svg,.nav-phone svg{color:var(--gold)}
+.nav-links a{color:var(--cream)}
+.nav-links a::after{background:var(--gold)}
+.nav-links a:hover{color:var(--gold-soft)}
+.burger{border-color:var(--line-blue);border-radius:0}
+.burger span{background:var(--gold-soft)}
+.mobile-menu{background:radial-gradient(circle at 80% 15%,var(--green) 0%,var(--green-ink) 70%)}
+.mobile-menu a{color:var(--cream);font-weight:500}
+.mm-phone{color:var(--gold)}
+.mm-social a{border-radius:0;border-color:var(--line-blue)}
+.mm-account-links a{color:var(--cream)}
+.nav-icon-btn,.nav-icon-btn svg{color:var(--cream)}
+.nav-icon-btn:hover{background:rgba(201,169,97,.14)}
+.nav-badge{background:var(--gold);color:var(--green-ink)}
+@media(max-width:860px){.nav-icon-btn{color:var(--cream)}}
+footer{background:var(--green-ink);border-top:1px solid var(--line)}
+.foot-col a,.foot-brand p{color:var(--mist)}
+.foot-col a:hover{color:var(--gold-soft)}
+.foot-bottom{border-top-color:var(--line);color:var(--gold)}
+
+/* ---- sections ---- */
+.light-sec,.light-sec.alt{background:var(--bg)}
+.light-sec.alt{background:var(--green-ink)}
+section+section{border-top:1px solid var(--line)}
+.marquee-strip{background:var(--green);border-block:1px solid var(--line);color:var(--gold-soft)}
+.marquee-track span{font-weight:500;letter-spacing:.12em}
+.marquee-track span i{background:var(--gold);opacity:1}
+
+/* ---- hero ---- */
+.hero-section{background:radial-gradient(ellipse at 20% 0%,var(--green) 0%,var(--green-deep) 55%,var(--green-ink) 100%)}
+.hero-blob.a{background:var(--gold);opacity:.1}
+.hero-blob.b{background:var(--green);opacity:.5}
+.hero-tag{border-radius:0;border-color:var(--line-blue);color:var(--gold-soft);letter-spacing:.06em}
+.hero-quick-cats a{border-radius:0;color:var(--cream)}
+.hero-quick-cats a:hover{background:var(--gold);color:var(--green-ink);border-color:var(--gold)}
+.hero-trust-mini span{color:var(--mist)}
+.showcase-card{background:var(--green-ink);border:1px solid var(--line-blue);border-radius:0;padding:24px;box-shadow:0 40px 70px -30px rgba(0,0,0,.7)}
+.showcase-tabs{background:var(--green);border-radius:0}
+.showcase-tabs button{border-radius:0;color:var(--mist)}
+.showcase-tabs button.active{background:var(--gold);color:var(--green-ink);box-shadow:none}
+.showcase-thumb{border-radius:0;background:var(--green)}
+.showcase-name{color:var(--cream)}
+.showcase-price,.hero-float-chip b{color:var(--gold-soft)}
+.hero-float-chip{background:var(--green);border:1px solid var(--line-blue);border-radius:0}
+.hero-float-chip span{color:var(--mist)}
+
+/* ---- search ---- */
+.home-search-box,.shop-search{background:var(--green-ink);border:1px solid var(--line-blue);border-radius:0;box-shadow:none}
+.home-search-box input,.shop-search input{color:var(--cream)}
+.home-search-box input::placeholder,.shop-search input::placeholder{color:var(--mist);opacity:.7}
+.home-search-tags a{border-radius:0;color:var(--cream)}
+.home-search-tags a:hover,.chip.active,.chip:hover{background:var(--gold);color:var(--green-ink);border-color:var(--gold)}
+.chip{border-radius:0;color:var(--cream)}
+
+/* ---- banner cards (brand-card) ---- */
+.brand-card{border-radius:0;background:linear-gradient(135deg,var(--green) 0%,var(--green-deep) 100%);border:1px solid var(--line-blue);box-shadow:none}
+.dot-pattern{background-image:radial-gradient(rgba(201,169,97,.4) 1.2px,transparent 1.2px)}
+.card-peek{display:none}
+
+/* ---- categories ---- */
+.cat-card2{border-radius:0;border:1px solid var(--line-blue);background:var(--green);box-shadow:none}
+.cat-card2:hover{transform:none;background:var(--green-ink);border-color:var(--gold);box-shadow:none}
+.cat-card2-icon{border-radius:0;background:transparent;border-color:var(--line-blue)}
+.cat-card2-icon svg{color:var(--gold)}
+.cat-card2-name{color:var(--cream);font-weight:500}
+.cat-card2-count{color:var(--mist)}
+
+/* ---- products ---- */
+.prod-card{background:var(--green);border:1px solid var(--line);border-radius:0;box-shadow:none}
+.prod-card:hover{transform:none;border-color:var(--gold)}
+.prod-media,.pd-media{border-radius:0;background:radial-gradient(circle at 65% 20%,var(--green),transparent 70%),var(--green-ink)}
+.prod-media img,.pd-media img{filter:saturate(.9)}
+.prod-tag{border-radius:0;background:var(--gold);color:var(--green-ink)}
+.prod-body h3{color:var(--cream);font-weight:500}
+.prod-body p,.prod-price{color:var(--mist)}
+.prod-price,.pd-price{color:var(--gold-soft)}
+.prod-cta{color:var(--gold)}
+.prod-like{background:rgba(3,47,45,.85);color:var(--cream);border-radius:0}
+.prod-like.active{color:var(--gold)}
+.pd-like-btn{background:rgba(3,47,45,.85);color:var(--cream);border-radius:0}
+
+/* ---- about / services / feature / trust ---- */
+.about-frame{border-radius:0;background:linear-gradient(150deg,var(--green),var(--green-ink));border:1px solid var(--line-blue);box-shadow:none}
+.about-badge{border-radius:0;background:var(--green-ink);border:1px solid var(--gold)}
+.about-badge span{color:var(--mist)}
+.about-ring-deco{border-color:var(--gold)}
+.about-copy p,.about-list p{color:var(--mist)}
+.about-list b{color:var(--cream)}
+.svc-card{border-radius:0;background:var(--green-ink);border:1px solid var(--line);backdrop-filter:none}
+.svc-card:hover{transform:none;background:var(--green);border-color:var(--gold)}
+.svc-icon{border-radius:0;background:transparent;border:1px solid var(--line-blue)}
+.svc-card p{color:var(--mist)}
+.feat-item svg{color:var(--gold)}
+.trust-section-card,.article-card{background:var(--green);border:1px solid var(--line);border-radius:0}
+.trust-section-icon{background:transparent;border:1px solid var(--line-blue);border-radius:0}
+.trust-section-icon svg{color:var(--gold)}
+.article-card:hover{transform:none;box-shadow:none;border-color:var(--gold)}
+.article-cover{border-radius:0;background:radial-gradient(circle at 30% 20%,var(--green),transparent 60%),var(--green-ink)}
+.article-cover svg{color:var(--gold)}
+.article-tag,.post-tag{border-radius:0;color:var(--gold);background:rgba(201,169,97,.1)}
+.article-body h3{color:var(--cream);font-weight:500}
+
+/* ---- testimonials ---- */
+.testi-text{font-weight:400}
+.testi-avatar{background:var(--gold);color:var(--green-ink)}
+.testi-dots button{background:rgba(201,169,97,.3)}
+.testi-dots button.active{background:var(--gold)}
+
+/* ---- contact / forms ---- */
+.cinfo-row .ic,.social-row a{border-radius:0;background:transparent;border:1px solid var(--line-blue)}
+.cinfo-row .ic svg,.social-row svg{color:var(--gold)}
+.social-row a:hover{background:var(--gold)}
+.social-row a:hover svg{color:var(--green-ink)}
+.cinfo-row span{color:var(--mist)}
+.form-card,.dash-login-card,.dash-form-card,.dash-table-wrap,.auth-card,.account-card,.account-nav,.cart-summary,.cart-item{background:var(--green);border:1px solid var(--line);border-radius:0;box-shadow:none}
+.field input,.field select,.field textarea,.review-form-fields input,.review-form-fields textarea,.profile-form-fields input,.dash-table select{background:var(--green-ink);border:1px solid var(--line-blue);border-radius:0;color:var(--cream)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+.field label{color:var(--mist)}
+.form-error{border-radius:0;background:rgba(201,169,97,.12);color:var(--gold-soft)}
+.form-success{border-radius:0}
+
+/* ---- page heroes, shop, product detail ---- */
+.page-hero{background:linear-gradient(180deg,var(--green-ink),var(--green-deep));border-bottom:1px solid var(--line)}
+.page-hero h1{color:var(--cream)}
+.crumbs a,.pd-category{color:var(--gold-soft)}
+.pd-media,.pd-thumb,.pd-quickspec-item,.pd-trust-row,.pd-warranty-box,.pd-payment-item,.desc-toc,.review-summary,.review-item,.order-row,.address-card,.pd-profile-box{border-radius:0;background:var(--green);border:1px solid var(--line)}
+.pd-thumb.active{border-color:var(--gold)}
+.pd-points-chip,.pd-stock,.pd-call-banner,.tag-chip,.review-form-msg{border-radius:0}
+.pd-stock.in,.pd-call-banner,.tag-chip{background:rgba(201,169,97,.12);color:var(--gold-soft)}
+.pd-qty button,.cart-qty button{background:var(--green-ink);color:var(--gold);border:1px solid var(--line-blue);border-radius:0;box-shadow:none}
+.cart-qty,.cart-item-media,.address-form{background:var(--green-ink);border-radius:0}
+.pd-tabs-nav button.active{color:var(--gold-soft);border-bottom-color:var(--gold)}
+.spec-table{border-radius:0}
+.spec-table tr:nth-child(even){background:var(--green-ink)}
+.bar-track{background:var(--green-ink)}
+.bar-fill{background:var(--gold)}
+.star-rating .star.filled{color:var(--gold)}
+.review-like-btn{border-radius:0;color:var(--mist)}
+.review-like-btn.active{background:rgba(201,169,97,.12);color:var(--gold-soft);border-color:var(--gold)}
+.prose a,.rich-editable a{color:var(--gold-soft)}
+.prose blockquote{background:var(--green);border-radius:0;border-inline-start-color:var(--gold)}
+.post-cover,.prose img{border-radius:0}
+
+/* ---- account + dashboard ---- */
+.account-nav a.active{background:var(--gold);color:var(--green-ink)}
+.account-nav a:hover,.account-nav .account-logout:hover{background:rgba(201,169,97,.12)}
+.dash-shell,.dash-login-wrap{background:var(--green-deep)!important}
+.dash-topbar{background:var(--green-ink);border-bottom:1px solid var(--line)}
+.dash-table th{background:var(--green-ink);color:var(--gold-soft)}
+.icon-btn{border-radius:0;color:var(--cream)}
+.icon-btn:hover{border-color:var(--gold);color:var(--gold-soft)}
+.rich-editor{background:var(--green-ink);border-radius:0}
+.rich-toolbar{background:var(--green)}
+.image-drop{border-radius:0}
+.status-badge{border-radius:0}
+
+/* ---- cursor ---- */
+.ink-cursor{border-color:var(--gold);mix-blend-mode:normal}
+.ink-cursor.big{background:rgba(201,169,97,.14)}

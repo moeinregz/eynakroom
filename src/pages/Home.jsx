@@ -274,9 +274,9 @@ export default function Home() {
                           <img src={imageUrl(p.image)} alt={p.name} />
                         ) : (
                           <svg viewBox="0 0 100 140" fill="none">
-                            <circle cx="32" cy="70" r="22" fill="none" stroke="#0e5c3b" stroke-width="6" />
-                            <circle cx="68" cy="70" r="22" fill="none" stroke="#0e5c3b" stroke-width="6" />
-                            <path d="M54 70h-4M10 66l8-4M90 66l-8-4" stroke="#0e5c3b" stroke-width="6" stroke-linecap="round" />
+                            <circle cx="32" cy="70" r="22" fill="none" stroke="#C9A961" stroke-width="6" />
+                            <circle cx="68" cy="70" r="22" fill="none" stroke="#C9A961" stroke-width="6" />
+                            <path d="M54 70h-4M10 66l8-4M90 66l-8-4" stroke="#C9A961" stroke-width="6" stroke-linecap="round" />
                           </svg>
                         )}
                       </span>
@@ -376,30 +376,30 @@ export default function Home() {
               <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="opticGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#e2ede6" />
-                    <stop offset="100%" stopColor="#9dc4ab" />
+                    <stop offset="0%" stopColor="#0A5F5A" />
+                    <stop offset="100%" stopColor="#064C48" />
                   </linearGradient>
                   <linearGradient id="lensGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#2f9d68" stopOpacity=".55" />
-                    <stop offset="100%" stopColor="#0e5c3b" stopOpacity=".2" />
+                    <stop offset="0%" stopColor="#0A6A64" stopOpacity=".55" />
+                    <stop offset="100%" stopColor="#C9A961" stopOpacity=".2" />
                   </linearGradient>
                 </defs>
                 <rect width="400" height="500" fill="url(#opticGrad)" />
-                <g stroke="#0e5c3b" strokeWidth="1" opacity=".12">
+                <g stroke="#C9A961" strokeWidth="1" opacity=".12">
                   <line x1="0" y1="120" x2="400" y2="120" />
                   <line x1="0" y1="240" x2="400" y2="240" />
                   <line x1="0" y1="360" x2="400" y2="360" />
                 </g>
                 <g transform="translate(60 190)" fill="none">
-                  <circle cx="65" cy="70" r="62" fill="url(#lensGrad)" stroke="#0e5c3b" strokeWidth="5" />
-                  <circle cx="215" cy="70" r="62" fill="url(#lensGrad)" stroke="#0e5c3b" strokeWidth="5" />
-                  <path d="M127 70h26" stroke="#0e5c3b" strokeWidth="5" strokeLinecap="round" />
-                  <path d="M3 58 L-25 40" stroke="#0e5c3b" strokeWidth="5" strokeLinecap="round" />
-                  <path d="M277 58 L305 40" stroke="#0e5c3b" strokeWidth="5" strokeLinecap="round" />
+                  <circle cx="65" cy="70" r="62" fill="url(#lensGrad)" stroke="#C9A961" strokeWidth="5" />
+                  <circle cx="215" cy="70" r="62" fill="url(#lensGrad)" stroke="#C9A961" strokeWidth="5" />
+                  <path d="M127 70h26" stroke="#C9A961" strokeWidth="5" strokeLinecap="round" />
+                  <path d="M3 58 L-25 40" stroke="#C9A961" strokeWidth="5" strokeLinecap="round" />
+                  <path d="M277 58 L305 40" stroke="#C9A961" strokeWidth="5" strokeLinecap="round" />
                   <circle cx="40" cy="48" r="9" fill="#ffffff" opacity=".55" />
                   <circle cx="190" cy="48" r="9" fill="#ffffff" opacity=".4" />
                 </g>
-                <g fill="#c6a253" opacity=".8">
+                <g fill="#C9A961" opacity=".8">
                   <circle cx="80" cy="90" r="3" />
                   <circle cx="330" cy="410" r="3" />
                   <circle cx="60" cy="430" r="2.4" />
