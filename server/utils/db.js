@@ -161,6 +161,7 @@ async function dbMiddleware(req, res, next) {
       return res;
     };
 
+    req._dbStore = store; // برای برگرداندن context بعد از multer
     als.run(store, next);
   } catch (err) {
     console.error('DB connection failed:', err);
@@ -185,8 +186,11 @@ const write = (name, value) => {
 
 // بعد از multer.memoryStorage() صدا زده می‌شه؛ تصویر رو توی Mongo (یا در حالت محلی روی دیسک) ذخیره می‌کنه
 async function persistUpload(req, res, next) {
+  // multer از رویدادهای استریم استفاده می‌کنه و context ی AsyncLocalStorage رو گم می‌کنه؛
+  // پس هر بار next() رو دوباره داخل همون store صدا می‌زنیم.
+  const proceed = () => (req._dbStore ? als.run(req._dbStore, next) : next());
   try {
-    if (!req.file) return next();
+    if (!req.file) return proceed();
     const ext = path.extname(req.file.originalname || '') || '.jpg';
     const filename = `${Date.now()}-${crypto.randomBytes(6).toString('hex')}${ext}`;
 
@@ -204,7 +208,7 @@ async function persistUpload(req, res, next) {
     }
 
     req.file.filename = filename;
-    next();
+    proceed();
   } catch (err) {
     console.error('Upload failed:', err);
     res.status(500).json({ message: 'ذخیره‌ی تصویر با خطا مواجه شد.' });
